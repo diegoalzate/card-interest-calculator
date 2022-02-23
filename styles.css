@@ -1,0 +1,104 @@
+body {
+  font-family: "Roboto Mono";   
+  padding: 2% 2%;
+  background-color: seagreen;
+}
+
+input {
+  border: none;
+  border-radius: 4px;
+  padding-left: 4px;
+  max-height: 1rem;
+  max-width: 4rem;
+  background-color: whitesmoke;
+}
+
+input:focus-visible {
+  border-color: seagreen;
+}
+
+.title {
+  text-align: center;
+  text-overflow: ellipsis;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#form {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result {
+  display: grid;
+  margin: 40px;
+  grid-template-columns: 1fr 1fr;
+  padding: 1% 2%;
+  text-align: center;
+  grid-auto-rows: 50px;
+  border: solid 1px black;
+}
+
+.grid-element {
+  padding: auto;
+  align-self: center;
+}
+
+.btn {
+  font-family: "Roboto Mono";
+  padding: 4px 8px;  
+  margin-left: 3%;
+  border-radius: 4px;
+  box-shadow: none;
+  border: 1px solid;
+  background-color: whitesmoke;
+}
+
+.btn:hover {
+  background-color: seagreen;
+  color: white;
+  border-color: white;
+}
+
+.input-group {
+  display: flex;
+  align-items: baseline;
+}
+
+.input-group:first-of-type {
+  margin-right: 2%;
+}
+
+.input-group:last-of-type {
+  margin-left: 2%;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  #form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn {
+    margin: 10% 0px;
+    min-width: 50vw;
+    align-self: center;
+  }
+
+  .input-group {
+    align-items: center;
+  }
+
+  .input-group:last-of-type {
+    margin-left: 0%;
+    margin-top: 2%;
+  }
+}
