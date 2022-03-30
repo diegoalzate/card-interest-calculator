@@ -17,10 +17,14 @@ const isCleanData = () => {
   let amount = Number(amountInput.value);
   let interest = Number(interestInput.value);
   let clean = true
-  if (!Number(months) || !Number(amount) || !Number(interest)) {
+  if (!Number(months) || !Number(amount) || !isNumber(interest)) {
     clean = false
   }
   return clean
+}
+
+const isNumber = (value) => {
+  return typeof value === 'number' && isFinite(value);
 }
 
 const calculate = () => {
